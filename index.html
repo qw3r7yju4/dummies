@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda Houmiel aka Mandy Gaskins</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+			background-color: black; color: white;
+			}
+		.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; }
+        .gallery img { display: block; width: 100%; height: auto; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid mt-4">
+    <h1 class="text-center mb-4">Amanda Houmiel, Orange Park, FL or Lexington Park, MD<br>Mandy Houmiel, Orange Park, FL or Lexington Park, MD<br>Amanda Gaskins, Orange Park, FL<br>Mandy Gaskins, Orange Park, FL</h1>
+    <p class="text-center mb-4"><a href="https://www.facebook.com/mandy.gaskins17/">Mandy Gaskins (@mandy.gaskins17) • Facebook, Connect with friends | Facebook</a></p>
+    
+    <!-- Image gallery container -->
+    <div id="gallery" class="gallery"></div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to loop and insert images -->
+    <script>
+        const gallery = document.getElementById('gallery');
+        for (let i = 1; i <= 38; i++) {
+            const img = document.createElement('img');
+            img.src = `https://raw.githubusercontent.com/qw3r7yju4/dummies/refs/heads/main/mandy${i}.jpg`;
+            img.alt = `Photo ${i}`;
+            img.className = 'img-fluid';
+
+            gallery.appendChild(img);
+        }
+    </script>
+    
+</body>
+</html>
