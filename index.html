@@ -11,7 +11,9 @@
 			background-color: black; color: white;
 			}
 				.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;  }
-                .gallery img { display: block; width: 100%; height: auto; border-radius: 10px; justified-content: center; }
+                .gallery img { display: block; width: 100%; height: auto; border-radius: 10px;  }
+                .gallery2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;  }
+                .gallery2 img { display: block; width: 100%; height: auto; border-radius: 10px;  }    
     </style>
 </head>
 <body>
@@ -29,6 +31,8 @@
 
     <!-- Image gallery container -->
     <div id="gallery" class="gallery"></div>
+    <p class="text-center mb-4"><center>Kaylen Marie Houmiel as I remember her.</center></p>    
+    <div id="gallery2" class="gallery2"></div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -45,6 +49,15 @@
             img.className = 'img-fluid';
 
             gallery.appendChild(img);
+        }
+        const gallery2 = document.getElementById('gallery');
+        for (let i = 1; i <= 4; i++) {
+            const img2 = document.createElement('img');
+            img2.src = `https://raw.githubusercontent.com/qw3r7yju4/dummies/refs/heads/main/images/mandykalen${i}.jpg`;
+            img2.alt = `Mandy and Kalen Photo ${i}`;
+            img2.className = 'img-fluid';
+
+            gallery2.appendChild(img2);
         }
     </script>
     
