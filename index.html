@@ -10,10 +10,10 @@
         body {
 			background-color: black; color: white;
 			}
-				.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;  }
-                .gallery img { display: block; width: 100%; height: auto; border-radius: 10px;  }
-                .gallery2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px;  }
-                .gallery2 img { display: block; width: 100%; height: auto; border-radius: 10px;  }    
+				.gallery { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;  }
+                .gallery img { width: calc(33.33% - 10px); box-sizing: border-box; margin 5px  }    
+				.gallery2 { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;  }
+                .gallery2 img { width: calc(33.33% - 10px); box-sizing: border-box; margin 5px  }    
     </style>
 </head>
 <body>
